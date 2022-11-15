@@ -5,6 +5,7 @@ use php_db;
     `username` TEXT,
     `password` TEXT,
     `admin` BOOL,
+    `email` TEXT,
     CONSTRAINT pk_users PRIMARY KEY (`id`)
 );
 
