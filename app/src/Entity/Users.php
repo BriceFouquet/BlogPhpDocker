@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+
 class Users extends BaseEntity
 {
     private ?int $id;
