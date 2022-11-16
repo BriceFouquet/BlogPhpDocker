@@ -2,16 +2,28 @@
 
 namespace App\Entity;
 
-use App\Interfaces\PasswordProtectedInterface;
-use App\Interfaces\UserInterface;
-
-class Users extends BaseEntity implements UserInterface, PasswordProtectedInterface
+class Form extends BaseEntity
 {
     private ?int $id;
     private string $username;
     private string $password;
     private string $email;
 
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int|null $id
+     */
+    public function setId(?int $id): void
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return string
@@ -23,7 +35,6 @@ class Users extends BaseEntity implements UserInterface, PasswordProtectedInterf
 
     /**
      * @param string $username
-     * @return Users
      */
     public function setUsername(string $username): void
     {
@@ -62,30 +73,4 @@ class Users extends BaseEntity implements UserInterface, PasswordProtectedInterf
         $this->email = $email;
     }
 
-    /**
-     * @return int|null
-     */
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param int|null $id
-     */
-    public function setId(?int $id): Users
-    {
-        $this->id = $id;
-        return this
-    }
-
-    public function getHashedPassword(): string
-    {
-        return 'coucou'; // faire la fonction de hashage
-    }
-
-    public function passwordMatch(string $plainPwd): bool
-    {
-        return true;
-    }
 }
