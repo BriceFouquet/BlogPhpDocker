@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Interfaces\PasswordProtectedInterface;
 use App\Interfaces\UserInterface;
+use Couchbase\User;
 
 class Users extends BaseEntity implements UserInterface, PasswordProtectedInterface
 {
@@ -25,9 +26,10 @@ class Users extends BaseEntity implements UserInterface, PasswordProtectedInterf
      * @param string $username
      * @return Users
      */
-    public function setUsername(string $username): void
+    public function setUsername(string $username): Users
     {
         $this->username = $username;
+        return $this;
     }
 
     /**
@@ -40,10 +42,12 @@ class Users extends BaseEntity implements UserInterface, PasswordProtectedInterf
 
     /**
      * @param string $password
+     * @return Users
      */
-    public function setPassword(string $password): void
+    public function setPassword(string $password): Users
     {
         $this->password = $password;
+        return $this;
     }
 
     /**
@@ -56,10 +60,12 @@ class Users extends BaseEntity implements UserInterface, PasswordProtectedInterf
 
     /**
      * @param string $email
+     * @return Users
      */
-    public function setEmail(string $email): void
+    public function setEmail(string $email): Users
     {
         $this->email = $email;
+        return $this;
     }
 
     /**
@@ -72,11 +78,12 @@ class Users extends BaseEntity implements UserInterface, PasswordProtectedInterf
 
     /**
      * @param int|null $id
+     * @return Users
      */
     public function setId(?int $id): Users
     {
         $this->id = $id;
-        return this
+        return $this;
     }
 
     public function getHashedPassword(): string

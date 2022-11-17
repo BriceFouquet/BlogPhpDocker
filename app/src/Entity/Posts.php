@@ -20,10 +20,12 @@ class Posts extends BaseEntity
 
     /**
      * @param int $post_id
+     * @return Posts
      */
-    public function setPostId(int $post_id): void
+    public function setPostId(int $post_id): Posts
     {
         $this->post_id = $post_id;
+        return $this;
     }
 
     /**
@@ -36,10 +38,12 @@ class Posts extends BaseEntity
 
     /**
      * @param string $created
+     * @return Posts
      */
-    public function setCreated(string $created): void
+    public function setCreated(string $created): Posts
     {
         $this->created = $created;
+        return $this;
     }
 
     /**
@@ -52,10 +56,12 @@ class Posts extends BaseEntity
 
     /**
      * @param string $username
+     * @return Posts
      */
-    public function setUsername(string $username): void
+    public function setUsername(string $username): Posts
     {
         $this->username = $username;
+        return $this;
     }
 
     /**
@@ -68,10 +74,12 @@ class Posts extends BaseEntity
 
     /**
      * @param int $id
+     * @return Posts
      */
-    public function setId(int $id): void
+    public function setId(int $id): Posts
     {
         $this->id = $id;
+        return $this;
     }
 
     /**
@@ -84,41 +92,12 @@ class Posts extends BaseEntity
 
     /**
      * @param string|null $content
+     * @return Posts
      */
-    public function setContent(?string $content): void
+    public function setContent(?string $content): Posts
     {
         $this->content = $content;
+        return $this;
     }
-
-    /**
-     * @return string|null
-     */
-    public function getImg(): ?string
-    {
-        return $this->img;
-    }
-
-    /**
-     * @param string|null $img
-     */
-    public function setImg(?string $img): void
-    {
-        $this->img = $img;
-    }
-
-    /**
-     * @return int
-     */
-    public function getAuthor(): int
-    {
-        return $this->author;
-    }
-
-    /**
-     * @param int $author
-     */
-    public function setAuthor(int $author): void
-    {
-        $this->author = $author;
-    }
+    
 }
