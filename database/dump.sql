@@ -1,6 +1,6 @@
-use php_db;
+use data;
 
-    CREATE TABLE if not EXISTS `users` (
+CREATE TABLE if not EXISTS `users` (
     `id`  INT NOT NULL auto_increment,
     `username` TEXT,
     `password` TEXT,

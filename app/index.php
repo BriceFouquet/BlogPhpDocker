@@ -1,9 +1,6 @@
 <?php
 require_once 'vendor/autoload.php';
 
-$Brice= new Users($username='Druss', $password='password', $email='drusschiasse@kiki.fr')
-
-
 ?>
 <<!doctype html>
 <html lang="en">
