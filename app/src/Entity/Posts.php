@@ -99,5 +99,4 @@ class Posts extends BaseEntity
         $this->content = $content;
         return $this;
     }
-    
 }

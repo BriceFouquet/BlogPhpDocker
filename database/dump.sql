@@ -26,12 +26,3 @@ CREATE TABLE if not EXISTS `posts`(
     `content` TEXT,
     PRIMARY KEY (`post_id`)
 );
-
-CREATE TABLE if not EXISTS `form` (
-   `id`  INT NOT NULL auto_increment,
-   `username` TEXT,
-   `password` TEXT,
-   `admin` BOOL,
-   `email` TEXT,
-   CONSTRAINT pk_form PRIMARY KEY (`id`)
-);

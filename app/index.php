@@ -1,17 +1,12 @@
 <?php
-require_once 'vendor/autoload.php';
 
-?>
-<<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Prout</title>
-</head>
-<body>
-prout
-</body>
-</html>
+use App\Entity\Users;
+
+require_once 'vendor/autoload.php';
+/** @var App\Entity\Users $users */
+$Brice= new Users([
+    "username" => "salut",
+    "password" => "rere",
+    "email" =>"rereer@tete.com"
+]);
+

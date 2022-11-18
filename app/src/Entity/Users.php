@@ -9,10 +9,14 @@ use Couchbase\User;
 class Users extends BaseEntity implements UserInterface, PasswordProtectedInterface
 {
     private ?int $id;
-    private string $username;
-    private string $password;
-    private string $email;
+    public ?string $username;
+    private ?string $password;
+    public ?string $email;
 
+        public function __construct(array $data = [])
+        {
+            parent::__construct($data);
+        }
 
     /**
      * @return string
