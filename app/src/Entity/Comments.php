@@ -4,11 +4,11 @@ namespace App\Entity;
 
 class Comments extends BaseEntity
 {
-    private int $comment_id;
-    private string $content;
-    private int $id;
+    private int $post_id;
     private string $username;
-    public string $created;
+    private int $id;
+    private string $created;
+    private string $content;
 
     /**
      * @return int
@@ -88,21 +88,5 @@ class Comments extends BaseEntity
     public function setContent(string $content): void
     {
         $this->content = $content;
-    }
-
-    /**
-     * @return int
-     */
-    public function getAuthor(): int
-    {
-        return $this->author;
-    }
-
-    /**
-     * @param int $author
-     */
-    public function setAuthor(int $author): void
-    {
-        $this->author = $author;
     }
 }

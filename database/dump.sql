@@ -1,4 +1,4 @@
-use php_db;
+use data;
 
     CREATE TABLE if not EXISTS `users` (
     `id`  INT NOT NULL auto_increment,
@@ -27,11 +27,3 @@ CREATE TABLE if not EXISTS `posts`(
     PRIMARY KEY (`post_id`)
 );
 
-CREATE TABLE if not EXISTS `form` (
-   `id`  INT NOT NULL auto_increment,
-   `username` TEXT,
-   `password` TEXT,
-   `admin` BOOL,
-   `email` TEXT,
-   CONSTRAINT pk_form PRIMARY KEY (`id`)
-);

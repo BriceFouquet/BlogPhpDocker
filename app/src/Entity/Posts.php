@@ -5,10 +5,10 @@ namespace App\Entity;
 class Posts extends BaseEntity
 {
     private int $post_id;
-    private int $id;
-    private ?string $content;
     private string $username;
-    public string $created;
+    private int $id;
+    private string $created;
+    private ?string $content;
 
     /**
      * @return int
