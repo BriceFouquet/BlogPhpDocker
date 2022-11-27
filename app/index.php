@@ -17,7 +17,6 @@ foreach ($dirs as $dir) {
     if ($dir === "." || $dir === "..") {
         continue;
     }
-
     $controllers[] = "App\\Controller\\" . pathinfo($controllerDir . DIRECTORY_SEPARATOR . $dir)['filename'];
 }
 

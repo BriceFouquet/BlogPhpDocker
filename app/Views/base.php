@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<p>Salut</p>
+
 <?= $_pageContent; ?>
 </body>
 </html>

@@ -33,6 +33,22 @@ class PostController extends AbstractController
      * @return void
      */
 
+    #[Route('/base', name: "base", methods: ["GET"])]
+    public function base()
+    {
+        $manger = new PostManager(new PDOFactory());
+        $posts = $manger->getAllPosts();
+
+        // Array sert à prendre des parametres et les afficher dans home.php
+        // Permet de faire passer des variables du "back" à la vue
+        $this->render("base.php", [
+            "posts" => $posts,
+            "phrase" => "je suis une string",
+            "machin" => 42
+        ], "Tous les posts");
+
+    }
+
 
     // Pour passer des params en URL et les afficher dans la page.
     // Sert à chercher un poste en particulier avec les arguments qu'on met dans l'URL
