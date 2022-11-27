@@ -8,6 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-proute pour voir
+
 </body>
 </html>
